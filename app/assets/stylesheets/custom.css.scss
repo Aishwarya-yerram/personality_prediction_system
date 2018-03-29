@@ -1,0 +1,100 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+$break-small: 600px;
+$break-large: 800px;
+.form-group.name1,
+  {
+    display:inline-block;
+    width:70%;
+    
+  }
+  .form-group.name2{
+  display:inline-block;
+  align: center;
+  }
+
+
+
+
+
+.btn-lg{
+	background: #101010;
+	color: white;
+	width: 250px;
+}
+
+.container {
+    display: inline-block;
+}
+
+
+.form-control{
+	width:250px;
+}
+
+.split {
+    height: 100%;
+    width: 60%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.left {
+    left: 0;
+     background-image: image_url('This-is-the-Rarest-Personality-Type-in-the-World_446415358-agsandrew-760x506.jpg');
+   background-size: cover;
+     @media screen and (min-width:768px) and  (max-width: $break-large) {
+         width: 100%;
+     }
+     @media screen and (max-width: $break-small) {
+         display: none;
+    }
+     
+    
+}
+.right {
+    right: 0;
+    background-color: orange;
+}
+
+h2{
+	font-weight: bold;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	
+}
+
+h1,h4{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	
+	
+}
+p{
+	color:black;
+}
+
+.nav-sidebar{
+	background-color: black;
+	height: 600px;
+	font-color: white;
+}
+.list-group-item{
+	background-color: black;
+	color: white;
+
+}
+div{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	
+}
+
+ .type{
+ 
+  margin-top: 15px;
+}
+h1{
+	color:black;
+}

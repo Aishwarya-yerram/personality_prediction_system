@@ -1,0 +1,60 @@
+<div class="split left">
+
+</div>
+<div class="split right">
+  
+
+  <h2 >Sign Up</h2> 
+  <h4 align="right">Already have account?<%= link_to "Log In" , new_user_session_path %></h4>
+
+  
+  <hr>
+  <br/>
+
+
+
+
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+  	<%= f.input :name ,required: true,:label=>"Name " %>
+    <br/>
+   
+   <%= f.input :email ,:required=>true,autofocus: true,:label=>"Email Address ",class: "form-control" %>
+
+   <br/>
+   <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+   <br/>
+    <%= f.input :password_confirmation ,:required=>true,:label=>"Password Confirmation",class: "form-control" %>
+    <br/>
+       <%= f.input :tel ,required: true,:label=>"Phone Number ",class: "form-control" %>
+       <br/>
+        
+     
+  
+    
+     
+   
+   <%= f.input :dob, label: "Date of Birth", start_year: Time.now.year - 90, end_year: Time.now.year - 8, order: [:day, :month, :year] %>
+   <br/> 
+   <%= f.label :profession %>
+  <%= f.select :profession, options_for_select(%w[Student Senior_developer Junior-developer])  %>
+  <br/>
+  <br/>
+   <%= f.input :address ,required: true,:label=>"Address ",class: "form-control" %>
+   <br/>
+   <%= f.input :city ,required: true,:label=>"City ",class: "form-control" %>
+   <br/>
+   <%= f.input :zip ,required: true,:label=>"Zip code ",class: "form-control" %>
+   <br/>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up" %>
+  </div>
+<% end %>
+
+
+</div>
