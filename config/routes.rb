@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   end
 
   resources :users do 
+    member do
   		get :dashboard 
+      get  :profile
+    end
   end
 end
