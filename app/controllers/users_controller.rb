@@ -3,6 +3,11 @@ class UsersController < ApplicationController
 	def dashboard
 
 	end
+	def adminDashBoard
+
+	end
+	
+	
 
 	def profile
 		@user = User.find_by(params[:id])

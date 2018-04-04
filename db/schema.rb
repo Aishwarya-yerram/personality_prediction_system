@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_03_28_173023) do
+ActiveRecord::Schema.define(version: 2018_04_04_040718) do
+
+  create_table "questions", force: :cascade do |t|
+    t.string "name"
+    t.string "option1"
+    t.string "option2"
+    t.string "option3"
+    t.string "correctoption"
+    t.string "type"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,6 +41,7 @@ ActiveRecord::Schema.define(version: 2018_03_28_173023) do
     t.string "address"
     t.string "city"
     t.bigint "zip"
+    t.boolean "role", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
