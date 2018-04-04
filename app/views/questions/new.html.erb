@@ -1,0 +1,29 @@
+<%= form_for @question do |u| %>
+  <div class="field">
+    <%= u.label :type  %>
+    <%= u.select(:type, options_for_select([['aptitude','aptitude'],['personality','personality']])) %>
+  </div>
+	<div class="field">
+    <%= u.label :name, 'Question'  %>
+    <%= u.text_field :name %>
+  </div>
+  <div class="field">
+  	<%= u.label :option1  %>
+  	<%= u.text_field :option1 %>
+  </div>
+  <div class="field">
+  	<%= u.label :option2  %>
+  	<%= u.text_field :option2 %>
+  </div>
+  <div class="field">
+  	<%= u.label :option3  %>
+  	<%= u.text_field :option3 %>
+  </div>
+  <div class="field">
+  	<%= u.label :correctoption  %>
+  	<%= u.text_field :correctoption %>
+  </div>
+  <div class="actions">
+    <%= u.submit %>
+  </div>
+<%end%>
