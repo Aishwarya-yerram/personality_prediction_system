@@ -19,4 +19,6 @@ Rails.application.routes.draw do
     end
   end
   resources :questions
+  resources :jobs
+  resources :uploads
 end
