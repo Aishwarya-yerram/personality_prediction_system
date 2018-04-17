@@ -1,0 +1,90 @@
+<% if current_user %>
+
+<div class="nav-side-menu">
+    <h2><div class="brand">STRONG TOWER CARDS</div></h2>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+    <div class="menu-list">
+        <ul id="menu-content" class="menu-content collapse out">
+            <li>
+                <a href="/users/<%= current_user.id %>/dashboard">
+                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Home</h4>
+                </a>
+            </li>
+            <li>
+                <a href="/users/<%= current_user.id %>">
+                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Category</h4>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Skills</h4>
+                </a>
+            </li>
+            <li>
+                <a href="/users/<%= current_user.id%>/applicants">
+                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Add Personality/Aptitude Questions</h4>
+                </a>
+            </li>
+            <li>
+                <a href= "">
+                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    Add Job Details</h4>
+                </a>
+            </li>
+            <li>
+                <a href= "">
+                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    Preffered CV</h4>
+                </a>
+            </li>
+            <li>
+                <a href= "">
+                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    Scan CV</h4>
+                </a>
+            </li>
+            <li>
+                <a href= "">
+                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    Shortlisted CV</h4>
+                </a>
+            </li>
+            <li>
+                <a href= "">
+                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    View Candidates</h4>
+                </a>
+            </li>
+            <li>
+                <a href= "">
+                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    Contact Manage</h4>
+                </a>
+            </li>
+            <li>
+                <a href= "">
+                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    View Results</h4>
+                </a>
+            </li>
+            <li>
+                <a href= "">
+                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    Logout</h4>
+                </a>
+            </li>
+            <!-- <ul class="sub-menu collapse" id="products">
+                
+                <li><a href="#">ledgers</a></li>
+                <li><a href="#">Purchases</a></li>
+                <li><a href="/deposits">Deposits</a></li>
+                <li><a href="#">Refunds</a></li>
+                <li><a href="#">Withdraws</a></li>
+               
+            </ul>
+             -->
+                
+        </ul>
+    </div>
+</div>
+<% end %>
