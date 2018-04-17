@@ -1,9 +1,12 @@
-= simple_form_for @question do |u| 
-	= u.label :type, 'Category'
-	= u.select :type, options_for_select(%w[Aptitude Personality])
-	= u.input :name, label: 'Quesion'
-	= u.input :option1
-	= u.input :option2
-	= u.input :option3
-	= u.input :correctoption, label: 'Answer'
-	= u.submit
+#main.container
+	.row
+		.col-md-6
+			= simple_form_for @question do |u| 
+				= u.label :type, 'Category'
+				= u.select :type, options_for_select(%w[Aptitude Personality])
+				= u.input :name, label: 'Quesion'
+				= u.input :option1
+				= u.input :option2
+				= u.input :option3
+				= u.input :correctoption, label: 'Answer'
+				= u.submit

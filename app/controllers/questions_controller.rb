@@ -13,6 +13,11 @@ class QuestionsController < ApplicationController
 			render 'new'
 		end
 	end
+
+	def categories
+	end
+
+
 	private
 	def question_params
 		params.require(:question).permit(:name, :option1, :option2, :option3, :correctoption)

@@ -1,5 +1,16 @@
-- @uploads.each do |upload|
-  = link_to upload do
-    %img{src: "#{upload.name.square}"}/
+= link_to @upload do
+    %object{:data => "#{@upload.name}", :height => "400", :width => "400"}
 %br/
 = link_to 'New upload', new_upload_path
+%br
+= link_to 'Destroy', @upload,  method: :delete, data: { confirm: 'Are you sure?' }
+/ %img{src: "#{@upload.name.url}"}/
+/ %br/
+/ %img{src: "#{@upload.name.large}"}/
+/ %br/
+/ %img{src: "#{@upload.name.medium}"}/
+/ %br/
+/ %img{src: "#{@upload.name.thumb}"}/
+/ %br/
+/ %img{src: "#{@upload.name.square}"}/
+/ %br/

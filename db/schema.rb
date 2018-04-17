@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_04_155918) do
+ActiveRecord::Schema.define(version: 2018_04_17_111151) do
+
+  create_table "categories", force: :cascade do |t|
+    t.string "category_type"
+  end
 
   create_table "jobs", force: :cascade do |t|
     t.string "company_name"
@@ -25,6 +29,11 @@ ActiveRecord::Schema.define(version: 2018_04_04_155918) do
     t.string "option3"
     t.string "correctoption"
     t.string "type"
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "name"
+    t.decimal "weight"
   end
 
   create_table "uploads", force: :cascade do |t|
