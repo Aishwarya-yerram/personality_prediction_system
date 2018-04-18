@@ -1,0 +1,49 @@
+#main.container
+	.row
+		.col-md-6.col-xs-offset-2
+			%h3 Skills Management
+			%a.btn.btn-large.btn-success{href: '/skills/new', role: "button"} Add Skills
+			%table.table.table-hover
+				%thead
+					%tr
+						%th Skill Name
+						%th Weight
+						%th Details
+					%tr
+				- @skills.each do |s|
+					%tr
+						%td= s.name
+						%td= s.weight
+						%td= link_to raw('<i class = "glyphicon glyphicon-pencil"></i>'),edit_skill_path(s)
+						%td= link_to raw('<i class = "glyphicon glyphicon-trash"></i>'),edit_skill_path(s)
+
+
+
+/							%a.btn.btn-large.btn-primary{href: '/skills/:id/edit', class: 'glyphicon glyphicon-pencil', role: "button"}  
+/							%a.btn.btn-large.btn-danger{href: '/skills/:id/edit', class: 'glyphicon glyphicon-trash', role: "button"}
+
+
+
+
+/ %table.table.table-hover
+/   %thead
+/     %tr
+/       %th Firstname
+/       %th Lastname
+/       %th Email
+/   %tbody
+/     %tr
+/       %td John
+/       %td Doe
+/       %td john@example.com
+/     %tr
+/       %td Mary
+/       %td Moe
+/       %td mary@example.com
+/     %tr
+/       %td July
+/       %td Dooley
+/       %td july@example.com
+
+					
+

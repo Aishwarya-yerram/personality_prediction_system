@@ -1,18 +1,18 @@
 #main.container
 	.row
-		.col-md-6
+		.col-md-6.col-xs-offset-2
 			%h3 Categories of Questions
 			%a.btn.btn-large.btn-success{href: '/categories/new', role: "button"} Add Q Section
-			%table{border: 1, align:'center'}
+			%table.table.table-hover
 				%thead
-					%th
-						Q Section Name
-					%th
-						Details
+					%tr
+						%th Q Section Name
+						%th Details
 				%tbody
-					%td
-				- @category.each do |c| 
-					%br
-
-					%td= c.category_type 
+					%tr
+				- @category.each do |c|
+					%tr
+						%td= c.category_type
+						%td= 1
+					
 
