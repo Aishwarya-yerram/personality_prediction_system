@@ -1,11 +1,10 @@
-
-
-%h1 New Upload
-= form_for(@upload) do |f|
-  %div
-    = f.label :name
-    %br/
-    = f.file_field :name
-  %div
-    = f.submit
-= link_to 'Back', uploads_path
+#main.container
+	.row
+		.col-md-6
+			%h1 New upload
+			= simple_form_for @upload do |f|
+				= f.label :name
+				= f.file_field :name
+				= f.submit
+			= link_to 'Back', uploads_path
+			

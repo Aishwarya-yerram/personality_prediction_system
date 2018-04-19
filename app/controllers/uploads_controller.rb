@@ -1,6 +1,6 @@
 class UploadsController < ApplicationController
   before_action :set_upload, only: [:show, :edit, :update, :destroy]
- 
+  # require 'KeywordHelper'
   # GET /uploads
   def index
     @uploads = Upload.all
@@ -18,7 +18,15 @@ class UploadsController < ApplicationController
   # GET /uploads/1/edit
   def edit
   end
- 
+  
+ def pdf_reader
+    @upload = Upload.find(params[:id])
+    @reader = PDF::Reader.new( File.new("#{Rails.root}/public#{@upload.name.url}"))
+
+    # @keyword = KeywordHe/lper.keywords
+  end 
+
+
   # POST /uploads
   def create
     @upload = Upload.new(post_upload_params)

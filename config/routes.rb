@@ -18,10 +18,13 @@ Rails.application.routes.draw do
 
     end
   end
-
   resources :questions 
   resources :jobs
-  resources :uploads
+  resources :uploads do 
+    member do 
+      get :pdf_reader
+    end
+  end
   resources :categories
   resources :skills
 end
