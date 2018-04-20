@@ -1,0 +1,22 @@
+#main.container
+	.row
+		.col-md-6
+		- @questions.each do |question|
+			%br
+			%label
+				Question
+				= question.name
+				%br
+			%label
+			%br
+			%form
+				%input{:name => "option1", :type => "radio", :value => "#{question.option1}"} 
+					= question.option1
+				%br
+				%input{:name => "option2", :type => "radio", :value => "#{question.option2}"} 
+					= question.option2
+				%br
+				%input{:name => "option3", :type => "radio", :value => "#{question.option3}"} 
+					= question.option3	
+				%br			
+				%a.btn.btn-primary{href: "#", role: "button"} Submit

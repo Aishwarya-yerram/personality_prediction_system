@@ -1,0 +1,6 @@
+#main.container
+	.row
+		.col-md-6
+			= simple_form_for @category, url:category_path, method: :patch  do |q|
+				= q.input :category_type
+				= q.submit

@@ -1,0 +1,16 @@
+#main.container
+	.row
+		.col-md-6
+		- @questions.each do |question|
+			%br
+			%label
+				Question
+				= question.name
+				%br
+			%label
+			%br
+				= question.option1
+				%br
+				= question.option2
+				%br
+				= question.option3

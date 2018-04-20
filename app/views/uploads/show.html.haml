@@ -8,6 +8,8 @@
 			= link_to 'New upload', new_upload_path
 			%br
 			= link_to 'Destroy', @upload,  method: :delete, data: { confirm: 'Are you sure?' }
+
+			= 
 / %img{src: "#{@upload.name.url}"}/
 / %br/
 / %img{src: "#{@upload.name.large}"}/

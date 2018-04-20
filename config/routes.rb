@@ -18,7 +18,11 @@ Rails.application.routes.draw do
 
     end
   end
-  resources :questions 
+  resources :questions do 
+    collection do 
+      get :test 
+    end
+  end
   resources :jobs
   resources :uploads do 
     member do 

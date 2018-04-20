@@ -15,7 +15,7 @@
 						%td= s.name
 						%td= s.weight
 						%td= link_to raw('<i class = "glyphicon glyphicon-pencil"></i>'),edit_skill_path(s)
-						%td= link_to raw('<i class = "glyphicon glyphicon-trash"></i>'),edit_skill_path(s)
+						%td= link_to raw('<i class = "glyphicon glyphicon-trash"></i>'),skill_path(s),method: :delete
 
 
 

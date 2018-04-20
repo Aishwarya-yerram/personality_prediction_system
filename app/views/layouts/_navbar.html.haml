@@ -20,31 +20,31 @@
           - if @current_user
             %li
               %a{:href => "/invites"} Friend Requests
-          %li.dropdown
-            %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              Dropdown
-              %span.caret
-            %ul.dropdown-menu
-              %li= link_to'Signup',root_path
-              %li
-                %a{:href => "#"} Another action
-              %li
-                %a{:href => "#"} Something else here
-              %li.divider{:role => "separator"}
-              %li
-                %a{:href => "#"} Separated link
-              %li.divider{:role => "separator"}
-              %li
-                %a{:href => "#"} One more separated link
-        %form.navbar-form.navbar-left
-          .form-group
-            %input.form-control{:placeholder => "Search", :type => "text"}/
-          %button.btn.btn-default{:type => "submit"} Submit
-        %ul.nav.navbar-nav.navbar-right
+          / %li.dropdown
+          /   %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          /     Dropdown
+          /     %span.caret
+          /   %ul.dropdown-menu
+          /     %li= link_to'Signup',root_path
+          /     %li
+          /       %a{:href => "#"} Another action
+          /     %li
+          /       %a{:href => "#"} Something else here
+          /     %li.divider{:role => "separator"}
+          /     %li
+          /       %a{:href => "#"} Separated link
+          /     %li.divider{:role => "separator"}
+          /     %li
+          /       %a{:href => "#"} One more separated link
+        / %form.navbar-form.navbar-left
+        /   .form-group
+        /     %input.form-control{:placeholder => "Search", :type => "text"}/
+        /   %button.btn.btn-default{:type => "submit"} Submit
+        / %ul.nav.navbar-nav.navbar-right
 
          
         %li.dropdown
-          %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button", align: 'le'}
           %img.nav-user-photo{:alt => "", :src => "/assets/images/admin.jpg"}Welcome Admin
           %span.caret
         %ul.dropdown-menu

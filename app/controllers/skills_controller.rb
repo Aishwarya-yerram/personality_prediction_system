@@ -14,11 +14,29 @@ class SkillsController < ApplicationController
 	end
 
 	def index
-		@skills = Skill.all
+		@skills = Skill.all.order(name: :asc)
 	end
 
 	def edit
+		@skill = Skill.find(params[:id])
+	end
+
+	def update
+		@skill = Skill.find(params[:id])
+		if @skill.update(skills_params)
+			flash[:success] = "Successfully Updated!"
+			redirect_to skills_path
+		else
+			render 'edit'
 		end
+	end
+
+	def destroy
+		@skill = Skill.find(params[:id])
+		@skill.destroy!
+		redirect_to request.referrer
+	end
+
 
 	private
 	def skills_params

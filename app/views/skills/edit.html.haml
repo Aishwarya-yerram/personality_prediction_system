@@ -1,0 +1,7 @@
+#main.container
+	.row
+		.col-md-6
+			= simple_form_for @skill,url:skill_path,method: :patch do |q|
+				= q.input :name
+				= q.input :weight
+				= q.submit
