@@ -1,6 +1,9 @@
-= simple_form_for @job do |u| 
- 
-  = u.input :company_name 
-  = u.input :title 
-  = u.input :description 
-  = u.submit 'Create a Job'
+#main.container
+	.row
+		.col-md-6
+			= simple_form_for @job do |u| 
+				= u.input :company_name
+				= u.input :title
+				= u.input :description
+				= u.submit 'Create a Job'
+				

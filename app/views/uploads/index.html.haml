@@ -1,5 +1,11 @@
-- @uploads.each do |upload|
-  = link_to upload do
-    %img{src: "#{upload.name.square}"}/
-%br/
-= link_to 'New upload', new_upload_path
+#main.container
+	.row
+		.col-md-6
+		- @uploads.each do |upload|
+			%br
+			= link_to upload do
+				%object{:data => "#{upload.name}", :height => "400", :width => "400"}
+			%br
+			%a.btn.btn-lg.btn-success{ href: "/uploads/#{upload.id}/pdf_reader", role: "button"} Scan PDF
+		%a.btn.btn-large.btn-success{href: '/uploads/new', role: "button"} New Upload
+

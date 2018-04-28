@@ -4,12 +4,13 @@
 		.col-md-6
 			= link_to @upload do
 				%object{:data => "#{@upload.name}", :height => "400", :width => "400"}
-			%br/
+				%br/
+				%a.btn.btn-large.btn-success{href: "#{@upload.id}/pdf_reader", role: "button"} Scan Pdf
 			= link_to 'New upload', new_upload_path
 			%br
 			= link_to 'Destroy', @upload,  method: :delete, data: { confirm: 'Are you sure?' }
 
-			= 
+			 
 / %img{src: "#{@upload.name.url}"}/
 / %br/
 / %img{src: "#{@upload.name.large}"}/
