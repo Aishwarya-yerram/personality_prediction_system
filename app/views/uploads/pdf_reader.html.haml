@@ -2,6 +2,7 @@
 	.row
 		.col-md-6
 		-	@reader.pages.each do |page|
-			= page.text.split.to_a.pluck().compact
+			-	@array.each do |array|
+				= page.text.split.to_a.pluck(array).compact.count
 
 			

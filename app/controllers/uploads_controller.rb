@@ -22,7 +22,7 @@ class UploadsController < ApplicationController
  def pdf_reader
     @upload = Upload.find(params[:id])
     @reader = PDF::Reader.new( File.new("#{Rails.root}/public#{@upload.name.url}"))
-
+    @array = ["C++", "Android", "Ruby on Rails", "SQL"]
     # @keyword = KeywordHe/lper.keywords
   end 
 
@@ -32,7 +32,7 @@ class UploadsController < ApplicationController
     @upload = Upload.new(post_upload_params)
  
     if @upload.save
-      redirect_to @upload, notice: 'Upload was successfully created.'
+      redirect_to uploads_path, notice: 'Upload was successfully created.'
     else
       render :new
     end
@@ -41,7 +41,7 @@ class UploadsController < ApplicationController
   # PATCH/PUT /uploads/1
   def update
     if @upload.update(post_upload_params)
-      redirect_to @upload, notice: 'Upload attachment was successfully updated.'
+      redirect_to uploads_path, notice: 'Upload attachment was successfully updated.'
     else
       render :edit
     end
@@ -64,3 +64,4 @@ class UploadsController < ApplicationController
       params.require(:upload).permit(:name)
     end
 end
+
