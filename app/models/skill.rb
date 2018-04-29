@@ -1,3 +1,3 @@
 class Skill < ApplicationRecord
-	belongs_to :uploads
+	belongs_to :upload, optional: true
 end
