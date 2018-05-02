@@ -35,7 +35,11 @@ class UsersController < ApplicationController
   		@user = User.find(params[:id])
   		@user.update(status: "Shortlisted")
   		flash[:success] = "You have successfully shortlited the candidate"
-  		redirect_to shortlist_users_path
+  		redirect_to users_path
+  	end
+
+  	def index
+  		@users = User.all
   	end
   	
 
