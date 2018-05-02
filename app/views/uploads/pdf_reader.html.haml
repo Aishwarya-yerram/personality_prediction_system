@@ -1,8 +1,13 @@
 #main.container
 	.row
-		.col-md-6
+		.col-md-0
+		- 	value = 0.0
 		-	@reader.pages.each do |page|
 			-	@array.each do |array|
-				= page.text.split.to_a.pluck(array).compact.count
-
-			
+				-	skill = page.text.split.to_a.pluck(array).compact
+				= skill
+				-	if skill == ["C++"]
+					-	value = value + 3.0
+				-	else skill == ["SQL"]
+					-	value = value + 1.1
+	= value

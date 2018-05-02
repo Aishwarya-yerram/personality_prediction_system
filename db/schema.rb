@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_17_111151) do
+ActiveRecord::Schema.define(version: 2018_05_02_061726) do
 
   create_table "categories", force: :cascade do |t|
     t.string "category_type"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_04_17_111151) do
   create_table "skills", force: :cascade do |t|
     t.string "name"
     t.decimal "weight"
+    t.integer "upload_id"
   end
 
   create_table "uploads", force: :cascade do |t|
@@ -63,6 +64,7 @@ ActiveRecord::Schema.define(version: 2018_04_17_111151) do
     t.string "city"
     t.bigint "zip"
     t.boolean "role", default: false
+    t.string "status", default: "Not Accepted"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

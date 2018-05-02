@@ -22,7 +22,7 @@ class UploadsController < ApplicationController
  def pdf_reader
     @upload = Upload.find(params[:id])
     @reader = PDF::Reader.new( File.new("#{Rails.root}/public#{@upload.name.url}"))
-    @array = ["C++", "Android", "Ruby on Rails", "SQL"]
+    @array = ["C++", "Android", "Ruby on Rails", "SQL", "Shivang"]
     # @keyword = KeywordHe/lper.keywords
   end 
 

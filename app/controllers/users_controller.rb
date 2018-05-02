@@ -25,10 +25,23 @@ class UsersController < ApplicationController
   	else 
   		render 'edit'
   	end
-  end
+  	end
+
+  	def shortlist
+  		@users = User.where(status: "Not Accepted")
+  	end
+
+  	def shortlist_update
+  		@user = User.find(params[:id])
+  		@user.update(status: "Shortlisted")
+  		flash[:success] = "You have successfully shortlited the candidate"
+  		redirect_to shortlist_users_path
+  	end
+  	
+
   private
   def user_params
-  	 params.require(:user).permit(:email,:name,:dob,:tel,:profession, :address,:city,:zip)
+  	 params.require(:user).permit(:email,:name,:dob,:tel,:profession, :address,:city,:zip, :role,:status)
   end
 
 end

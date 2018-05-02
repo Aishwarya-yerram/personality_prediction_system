@@ -5,6 +5,8 @@
 			= simple_form_for @upload do |f|
 				= f.label :name
 				= f.file_field :name
+				%br
 				= f.submit
-			= link_to 'Back', uploads_path
+			%br
+			= link_to 'Back', request.referer
 			

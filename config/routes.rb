@@ -15,7 +15,10 @@ Rails.application.routes.draw do
       get :adminDashBoard
   		get :dashboard 
       get :profile
-
+      post :shortlist_update
+    end
+    collection do
+      get :shortlist
     end
   end
   resources :questions do 

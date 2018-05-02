@@ -1,0 +1,14 @@
+#main.container
+	.row
+		.col-md-6
+			%h1 #{current_user.name} this is your dashboard
+			%a.btn.btn-lg.btn-success{href: "#"} Take Test
+
+			%br
+			= link_to "Edit Profile", edit_user_path
+			%br
+			= link_to "Show Profile", profile_user_path
+			%br
+			%br
+			= link_to " Logout ", destroy_user_session_path, method: :delete, data: {confirm: " Are you Sure?" }
+

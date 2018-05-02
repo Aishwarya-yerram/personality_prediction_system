@@ -1,0 +1,20 @@
+#main.container
+	.row
+		.col-md-6
+			- if @users.exists?
+				%table{border: 1, align: "center"}
+					%thead
+						%tr
+							%th Name
+							%th DOB
+							%th Profession
+						- @users.each do |user|
+							%tr
+								%td= user.name
+								%td= user.dob
+								%td= user.profession
+								%td= link_to "Shortlist", shortlist_update_user_path(user), method: :post
+							%br
+			- else
+				%h3{:style => 'color: blue'} There are no candidates					
+						

@@ -1,0 +1,30 @@
+#main.container
+  .row
+    .col-md-6
+      %h1 Editing Profile
+      = form_with(model: @user, local: true) do |form|
+        - if @user.errors.any?
+          #error_explanation
+            %h2
+              = pluralize(@user.errors.count, "error")
+              prohibited from being saved:
+            %ul
+              - @user.errors.full_messages.each do |message|
+                %li= message
+        .field
+          = form.label :name
+          = form.text_field :name
+        .field
+          = form.label :profession
+          = form.text_field :profession
+        .field
+          = form.label :address
+          = form.text_field :address
+        .field
+          = form.label :city
+          = form.text_field :city
+        .field
+          = form.label :zip
+          = form.text_field :zip
+        .actions
+          = form.submit

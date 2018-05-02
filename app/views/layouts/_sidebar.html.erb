@@ -6,48 +6,72 @@
     <div class="menu-list">
         <ul id="menu-content" class="menu-content collapse out">
             <li>
-                <a href="#">
-                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Home</h4>
-                </a>
+                <% if current_user.role == true %>
+                    <a href="/users/<%= current_user.id %>/adminDashboard">
+                        <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Home</h4>
+                    </a>
+                <% else %>
+
+                    <a href="/users/<%= current_user.id %>/dashboard">
+                        <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Home</h4>
+                    </a>
+                <% end %>
             </li>
             <li>
-                <a href="/categories">
-                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Category</h4>
-                </a>
+                <% if current_user.role == true %>
+                    <a href="/categories">
+                        <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Category</h4>
+                    </a>
+                <% end %>
             </li>
             <li>
-                <a href="/skills">
-                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Skills</h4>
-                </a>
+                <% if current_user.role == true %>
+                    <a href="/skills">
+                        <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Skills</h4>
+                    </a>
+                <% end %>
             </li>
             <li>
-                <a href="/questions/new">
-                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Add Personality/Aptitude Questions</h4>
-                </a>
+                <% if current_user.role == true %>
+                    <a href="/questions/new">
+                        <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Add Personality/Aptitude Questions</h4>
+                    </a>
+                <% end %>
             </li>
             <li>
-                <a href= "">
+                <% if current_user.role == true %>
+                    <a href= "/jobs/new">
+                        <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                        Add Job Details</h4>
+                    </a>
+                <% end %>
+            </li>
+            <li>
+                <a href= "/uploads/new">
                     <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-                    Add Job Details</h4>
+                    Uploading CV</h4>
                 </a>
             </li>
             <li>
-                <a href= "">
-                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-                    Preffered CV</h4>
-                </a>
+                <% if current_user.role == true %>
+                    <a href= "/uploads">
+                        <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                        Scan CV</h4>
+                    </a>
+                <% end %>
             </li>
             <li>
-                <a href= "">
-                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-                    Scan CV</h4>
-                </a>
-            </li>
-            <li>
-                <a href= "">
-                    <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
-                    Shortlisted CV</h4>
-                </a>
+                <% if current_user.role == true %>
+                    <a href= "">
+                        <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                        Shortlisted CV</h4>
+                    </a>
+                <% else %>
+                    <a href= "">
+                        <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                        Take Test</h4>
+                    </a>
+                <% end %>
             </li>
             <li>
                 <a href= "">
@@ -68,7 +92,7 @@
                 </a>
             </li>
             <li>
-                <a href= "">
+                <a href= "/user/sign_out">
                     <h4><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
                     Logout</h4>
                 </a>

@@ -1,0 +1,19 @@
+#main.container
+  .row
+    .col-md-6
+      %h1 Profile
+      %h5
+        Dear #{current_user.name},have a look at your Profile
+      .form-inputs
+        %hr/
+        = current_user.name
+        %br/
+        = current_user.profession
+        %br/
+        = current_user.address
+        %br/
+        = current_user.city
+        %br/
+        = current_user.zip
+        %br/
+      = link_to 'Edit your information', edit_user_path
